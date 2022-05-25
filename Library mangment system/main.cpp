@@ -3,13 +3,13 @@ Developement by: Anis bazzine start do this homework by 23-09-2021
 the homework give by :
 	https://harmash.com/algorithms-and-data-structure/data-structure-test-1/
 bugs to fixed:
-1- when try to delete books don't show it's oky
-2 when try to print books info don't show title book and author of book
+	* 1 when try to delete books don't show it's oky
+	* 2 when try to print books info don't show title book and author of book
+	* 3 Don't shwo id of author after add author 
 */
 #include <iostream>
 #include <string>
-#include "stdlib.h"
-#include "Library.h"
+#include "class.h"
 using namespace std;
 void free();
 void welcomeScrean();
@@ -46,8 +46,8 @@ void welcomeScrean(){
 void for_books(){
 	/* 	-1- exit
 		1- add
-	    2- remove
-	    3- print book info*/
+		2- remove
+		3- print book info*/
 	cout << "  --------------------------------------\n";
 	cout << "|| 1 To add Books to your library.     ||\n";
 	cout << "|| 2 To remove Books from your library.||\n";
@@ -146,11 +146,11 @@ void for_author(){
 	}
 }
 void choise_list(){
-	cout << "  =========================\n";
+	cout << "  -------------------------\n";
 	cout << "|| 1 To Author option      ||\n";
 	cout << "|| 2 To Books option       ||\n";
-	cout << "|| -1 To exit  		    ||\n";
-	cout << "  =========================\n";
+	cout << "|| -1 To exit  	  	    ||\n";
+	cout << "  -------------------------\n";
 	cout << "Please enter your choise : ";
 }
 void free(){

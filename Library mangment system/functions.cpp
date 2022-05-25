@@ -4,11 +4,13 @@
 using namespace std;
     void Library::add_author(Author a){// Done
         authorsOfLib.push_back(a);
+		cout << "ID author : " << a.get_id() << endl;
 		cout << "Add author OK\n";
 	}
 	void Library::add_book(Book b){ // Done
 		booksOfLib.push_back(b);
 		authorsOfLib.push_back(b.get_author());
+		cout << "ID book " << b.get_id() << endl;
 		cout << "Add book OK\n";
     }
 	void Library::remove_author(int id){// Done
@@ -53,11 +55,11 @@ using namespace std;
 					IdAuthor = i;
 					break;
 				}
-			cout <<"\nThe information of Author -----";
+			cout <<"\nThe information of Author ";
 			cout << "\nThe ID : " << authorsOfLib[IdAuthor].get_id();
 			cout << "\nThe name : " << authorsOfLib[IdAuthor].get_name();
 			cout << "\nThe phone : " << authorsOfLib[IdAuthor].get_phone();
-			cout << "\nThe email : " << authorsOfLib[IdAuthor].get_email();
+			cout << "\nThe email : " << authorsOfLib[IdAuthor].get_email() << endl;
 		}
     }
 	void Library::print_book(int id){// Done
