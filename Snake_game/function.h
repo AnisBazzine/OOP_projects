@@ -2,7 +2,7 @@
 #include<iostream>
 #include<ctime>
 #include<conio.h>
-#include <SnakeGame.cpp>
+#include "SnakeGame.cpp"
 #include"class.h"
 
 using namespace std;

@@ -6,8 +6,8 @@ ATM project
 2- cash withdraw
 3- User details
 4- Update mobile N0
-	 the bug is when do somting insad function don't aplly in class user1
-	 I need to use pointers
+	the bug is when do somting insad function don't aplly in class user1
+	I need to use pointers
 */
 class Atm{
 private:
