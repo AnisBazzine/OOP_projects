@@ -15,16 +15,14 @@ bugs to fixed:
 
 4.why tempBook.get_authorId()  = 0 ??
 
-it's not crate Author Id and stay 0, but when print author information find every think okay.
+	it's not crate Author Id and stay 0, but when print author information find every think okay.
 
-5.authorsOfLib[IdAuthor].get_name() don't print if enter from the book info 
-
-but if enter form the author info, print the name
+5.authorsOfLib[IdAuthor].get_name() don't print if enter from the book information, but if enter form the author info, print the name
 
 6.cout << "\nThe title : " << booksOfLib[IdBook].get_title();
 
-the title don't print
+	the title don't print
 
 7.cout << "\nThe author : " << booksOfLib[IdBook].get_name() << "\n";
 
-the author don't print 
+	the author don't print 
