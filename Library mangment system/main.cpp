@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include "Library.h"
@@ -54,7 +53,7 @@ void for_books(){
 	else if(choise == 1){ //Done add book
 		string t, pub_d, n, ph, e, v;
 		
-		cout << "Title : ";
+		cout << "Title Book : ";
 		getline(cin,t);
 		free();
 		cout << "Publishing Date book : ";
@@ -71,11 +70,6 @@ void for_books(){
 		
 		Book tempBook(v, t, pub_d, n, ph, e);
 		lib.add_book(tempBook);
-		
-		cout << "ID of the Author = " << tempBook.get_authorId() << endl;
-		cout << "ID of the book = " << tempBook.get_id() << endl;
-		// why tempBook.get_authorId()  = 0 ??
-		// it's not crate Author Id and stay 0
 	}
 	else if(choise == 2){ // remove books with id
 		int tempID;
@@ -110,30 +104,30 @@ void for_author(){
 	else if(choise == 1){ // Done add Author 
 		string n, ph, e;
 		free();
-		cout << "Enter name of author : ";
+		cout << "Name of author : ";
 		getline(cin, n);
-		cout << "Enter phone of author : ";
+		cout << "Phone of author : ";
 		cin >> ph;
-		cout << "Eneter email of author : ";
+		cout << "Email of author : ";
 		cin >> e;
 		Author tempAuthor(n,ph,e);
 		lib.add_author(tempAuthor);
 	}
 	else if(choise == 2){ // Done remove author with id
 		int tempID;
-		cout << "Enter the ID of the Author to remove : ";
+		cout << "Enter the Author ID to remove : ";
 		cin >> tempID;
 		lib.remove_author(tempID);
 	}
 	else if(choise == 3){ // Done print author info with id
 		int tempID;
-		cout << "Enter the ID of the Author to print his info : ";
+		cout << "Enter the Author ID to print his info : ";
 		cin >> tempID;
 		lib.print_author(tempID);
 	}
 	else if(choise == 4){ // print author books with id of author
 		int tempID;
-		cout << "Enter the ID of the Author to print his books : ";
+		cout << "Enter the Author ID to print his books : ";
 		cin >> tempID;
 		lib.print_author_books(tempID);
 	}
@@ -147,5 +141,5 @@ void choise_list(){
 	cout << "Enter your choise : ";
 }
 void free(){
-	cin.ignore(100,'\n');
+	cin.ignore(50,'\n');
 }

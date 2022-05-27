@@ -3,18 +3,22 @@
 #include "Library.h"
 using namespace std;
 // Library functions
-    void Library::add_author(Author a){// Done
+    
+void Library::add_author(Author a){// Done
         authorsOfLib.push_back(a);
 		cout << "ID author : " << a.get_id() << endl;
 		cout << "Add author OK\n";
 	}
-	void Library::add_book(Book b){ // Done
+
+void Library::add_book(Book b){ // Done
 		booksOfLib.push_back(b);
 		authorsOfLib.push_back(b.get_author());
 		cout << "ID book " << b.get_id() << endl;
+		cout << "ID author " << b.get_authorId() << endl;
 		cout << "Add book OK\n";
     }
-	void Library::remove_author(int id){// Done
+	
+void Library::remove_author(int id){// Done
 		if(authorsOfLib.size() <= 0){
 			cout << "The Library is empty of author\n";
 		}
@@ -29,7 +33,8 @@ using namespace std;
 		}
 		
     }
-	void Library::remove_book(int id){ // Done
+	
+void Library::remove_book(int id){ // Done
 		// with the id search for the book in forloop
 		// booksOfLib.erase(booksOfLib.gegin() + i);
 		if(booksOfLib.size() <= 0){
@@ -48,7 +53,8 @@ using namespace std;
 		}
 		
     }
-    void Library::print_author(int id){ // Done
+
+void Library::print_author(int id){ // Done
 		if(authorsOfLib.size() <= 0)
 			cout << "The library is empty of authors.\n";
 		else{
@@ -67,7 +73,8 @@ using namespace std;
 			cout << "\nThe email : " << authorsOfLib[IdAuthor].get_email() << endl;
 		}
     }
-	void Library::print_book(int id){// Done
+	
+void Library::print_book(int id){// Done
 		if(booksOfLib.size() <= 0){
 			cout << "The Library is empty of books.\n";
 		}
@@ -88,6 +95,7 @@ using namespace std;
 			cout << "----------------------\n";
 		}
     }
-	void Library::print_author_books(int id){
+	
+void Library::print_author_books(int id){
 
     }

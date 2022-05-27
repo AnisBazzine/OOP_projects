@@ -13,6 +13,7 @@ using namespace std;
 			version = v;
 			title = t;
 			publishing_data = pD;
+			authorId = author.get_id();
 		}
 	void Book::set_title(string t){
 		title = t;
