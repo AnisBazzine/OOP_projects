@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Author.h"
 #include "Book.h"
 using namespace std;
-// Library class
+
 class Library{
 public:
 	vector <Book> booksOfLib;

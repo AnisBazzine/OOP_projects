@@ -22,12 +22,12 @@ using namespace std;
 			for(int i = 0; i <= authorsOfLib.size(); i++)
 				if(authorsOfLib[i].get_id() == id){
 					authorsOfLib.erase(authorsOfLib.begin() + i);
-					cout << "The author was deleted from the Library\n";
+					cout << "reomve author OK\n";
 					return;
 				}
 			cout << "the authro is not in the library or the ID is false.\n";
 		}
-		cout << "reomve author OK\n";
+		
     }
 	void Library::remove_book(int id){ // Done
 		// with the id search for the book in forloop
@@ -36,15 +36,17 @@ using namespace std;
 			cout << "The Library is empty of book \n";
 		}
 		else{
-			for(int i = 0; i <= booksOfLib.size(); i++)
+			for(int i = 0; i <= booksOfLib.size(); i++){
 				if(booksOfLib[i].get_id() == id){
 					booksOfLib.erase(booksOfLib.begin() + i);
-					cout << "The book was deleted from the Library.\n";
+					cout << "Remove book OK\n";
 					return;
 				}
-			cout << "the book was not in the library or the ID is false\n";
+				else
+					cout << "the book was not in the library or the ID is false\n";
+			}
 		}
-		cout << "Remove book OK\n";
+		
     }
     void Library::print_author(int id){ // Done
 		if(authorsOfLib.size() <= 0)

@@ -1,7 +1,7 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include <string.h>
 #include "Author.h"
+
 using namespace std;
 
 // Books class

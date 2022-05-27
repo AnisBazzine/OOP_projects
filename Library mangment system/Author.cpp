@@ -1,8 +1,10 @@
+#include "Author.h"
 #include <iostream>
 #include <string.h>
-#include "Author.h"
+ 
+using namespace std;
 
-    // Author functions
+// Author functions
     	//------Setter funcion
     	Author::Author(){}
     	void Author::set_ID(){
@@ -14,6 +16,7 @@
     		phone = ph;
     		email = e;
 			Author::set_ID();
+			id  = Author::get_id();
     	}
     	void Author::set_phone(string ph){
     		phone = ph;
