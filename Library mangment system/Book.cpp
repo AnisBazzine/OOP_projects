@@ -9,11 +9,11 @@ using namespace std;
 	Book::Book(){}
 	Book::Book(string v, string t, string pD,string n, string ph, string e)
 	:author(n,ph,e){
-			set_id();
-			version = v;
-			title = t;
-			publishing_data = pD;
-			authorId = author.get_id();
+		set_id();
+		version = v;
+		title = t;
+		publishing_data = pD;
+		authorId = author.get_id();
 		}
 	void Book::set_title(string t){
 		title = t;
@@ -46,4 +46,7 @@ using namespace std;
 	}
 	Author Book::get_author(){
         return author;
+	}
+	string Book::get_author_name(){
+		return author.get_name();
 	}

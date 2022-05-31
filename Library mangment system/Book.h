@@ -26,4 +26,5 @@ public:
 	string get_title();
 	string get_publishing_data();
 	Author get_author();
+	string get_author_name();
 };

@@ -8,8 +8,8 @@ void for_author();
 void for_books();
 void choise_list();
 
-int Author::counterAuthor = 100;
-int Book::counterBook = 1000;
+int Author::counterAuthor = 1;
+int Book::counterBook = 1;
 Library lib;
 int choise;
 
@@ -40,12 +40,12 @@ void for_books(){
 		1- add
 		2- remove
 		3- print book info*/
-	cout << "  ----------------------------------\n";
-	cout << "|| 1 add Books to your library.     ||\n";
-	cout << "|| 2 remove Books from your library.||\n";
-	cout << "|| 3 print Books info.              ||\n";
-	cout << "|| -1 exit from the program.        ||\n";
-	cout << "  ----------------------------------\n";
+	cout << "  ---------------------------\n";
+	cout << "|| 1 add Books.              ||\n";
+	cout << "|| 2 remove Books.           ||\n";
+	cout << "|| 3 print Books info.       ||\n";
+	cout << "|| -1 exit from the program. ||\n";
+	cout << "  ---------------------------\n";
 	cout << "Please enter your choise : ";
 	cin >> choise;
 	if(choise == -1) // exit 
@@ -53,20 +53,21 @@ void for_books(){
 	else if(choise == 1){ //Done add book
 		string t, pub_d, n, ph, e, v;
 		
+		free();
 		cout << "Title Book : ";
 		getline(cin,t);
-		free();
 		cout << "Publishing Date book : ";
 		getline(cin,pub_d);
 		cout << "Version of book : ";
 		getline(cin,v);
-		free();
 		cout << "Name of his author : ";
 		getline(cin,n);
 		cout << "Phone of author : ";
 		getline(cin,ph);
 		cout << "Email of author : ";
 		cin >> e;
+		free();
+
 		
 		Book tempBook(v, t, pub_d, n, ph, e);
 		lib.add_book(tempBook);
@@ -90,13 +91,13 @@ void for_author(){
 	// 2- remove
 	// 3- print author info
 	// 4- print author books	
-	cout << "  -----------------------------------\n";
-	cout << "|| 1 add Author to your library.     ||\n";
-	cout << "|| 2 remove Author from your library.||\n";
-	cout << "|| 3 print Author info.              ||\n";
-	cout << "|| 4 print Author Books.             ||\n";
-	cout << "|| -1 exit from the program.         ||\n";
-	cout << "  -----------------------------------\n";
+	cout << "  -----------------------------\n";
+	cout << "|| 1 add Author.               ||\n";
+	cout << "|| 2 remove Author.            ||\n";
+	cout << "|| 3 print Author info.        ||\n";
+	cout << "|| 4 print Author Books.       ||\n";
+	cout << "|| -1 exit from the program.   ||\n";
+	cout << "  -----------------------------\n";
 	cout << "Please enter your choise : ";
 	cin >> choise;
 	if(choise == -1)  //  exit
