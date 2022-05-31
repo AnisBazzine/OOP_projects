@@ -6,4 +6,4 @@ Start new project by 31-05-2022 from:
 ## To-Do
     1 create classes .h & .cpp
 
-    2 create functions
+    2 create Company functions
