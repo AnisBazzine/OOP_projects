@@ -1,12 +1,17 @@
 #include <iostream>
+#include "Person.h"
 
 using namespace std;
 
-class Employee
-{
+class Employee : public Person{
 private:
-    /* data */
+    float salary;
+    string working_time;
 public:
-    Employee(/* args */);
-    ~Employee();
+    Employee(int i, string n, string ph, string g,float s, string wt);
+    void setSalary(float s);
+    void setWorkingTime(string wt);
+    float getSalary();
+    string getWorkingTime();
+    void print_extra_info();
 };
