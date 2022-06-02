@@ -48,6 +48,7 @@ public:
 		cout << "Name : " << name  << endl;
 		cout << "Mobile number : " << mobile << endl;
 		cout << "Your Balance : " << balance << endl; 
+		cout << "********************\n";
 	}
 	void update_mobile(string prevMob, string newMob){
 		if(prevMob == mobile){
@@ -124,7 +125,6 @@ int main() {
 		check = log_in(user1);
 	}
 	do{
-		// welcome();
 		choise_fun();
 		cin >> choise;
 		switcher(user1,choise);
