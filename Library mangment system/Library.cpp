@@ -53,7 +53,7 @@ void Library::remove_book(int id){ // Done
 void Library::print_author(int id){ // Done
 	if(authorsOfLib.size() <= 0)
 		cout << "The library is empty of authors.\n";
-	else if(id <= 0 or id > authorsOfLib.size()){
+	else if(id <= 0 or id){
 		cout << "ID isn't exist.\n";
 		}
 	else{

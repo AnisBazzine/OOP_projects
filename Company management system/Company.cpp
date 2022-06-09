@@ -121,6 +121,10 @@ using namespace std;
                     cout << "Name person : " << p.getName() << endl;
                     cout << "Data : " << orders[i].getData() << endl;
                     cout << (orders[i].getIsPaid() ? "Paid" : "Not paid") << endl;
+                    vector <Prodact> pt = orders[i].getProdacts();
+                    cout << "Prodacts : \n";
+                    for(int j = 0; j <= pt.size(); j++)
+                        cout << j + 1 << "-" << pt[j].getName() << endl;
                     cout << "**************\n";
                     return;
                 }
