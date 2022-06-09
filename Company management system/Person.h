@@ -4,14 +4,15 @@ using namespace std;
 
 class Person{
     private:
+        static int counterId;
         int id;
         string name;
         string phone;
         string gender;
     public:
         Person();
-        Person(int i, string n, string p, string g);
-        void setId(int i);
+        Person(string n, string p, string g);
+        void setId();
         void setName(string n);
         void setPhone(int ph);
         void setGender(string g);

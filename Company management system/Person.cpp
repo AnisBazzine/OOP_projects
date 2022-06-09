@@ -3,14 +3,14 @@
 using namespace std;
     // Setters
     Person::Person(){}
-    Person::Person(int i, string n, string ph, string g){
-        id = i;
+    Person::Person(string n, string ph, string g){
+        setId();
         name = n;
         phone = ph;
         gender = g;
     }
-    void Person::setId(int i){
-        id = i;
+    void Person::setId(){    
+        id = counterId++;
     }
     void Person::setName(string n){
         name = n;

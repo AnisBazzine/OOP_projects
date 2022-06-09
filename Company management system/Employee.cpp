@@ -3,7 +3,7 @@
 
 using namespace std;
     // Setters
-    Employee::Employee(int i, string n, string ph, string g,float s, string wt):Person(i,n,ph,g){
+    Employee::Employee(string n, string ph, string g,float s, string wt):Person(n,ph,g){
         salary = s;
         working_time = wt;
     }

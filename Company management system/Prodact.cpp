@@ -3,13 +3,13 @@
 
 using namespace std;
     Prodact::Prodact(){}
-    Prodact::Prodact(int i, string n, float p){
-        id = i;
+    Prodact::Prodact(string n, float p){
+        setId();
         name = n;
         price = p;
     }
-    void Prodact::setId(int i){
-        id = i;
+    void Prodact::setId(){
+        id = counterId++;
     }
     void Prodact::setName(string n){
         name = n;

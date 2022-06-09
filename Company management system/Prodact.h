@@ -4,13 +4,14 @@ using namespace std;
 
 class Prodact{
     private:
+        static int counterId;
         int id;
         string name;
         float price;
     public:
         Prodact();
-        Prodact(int i, string n, float p);
-        void setId(int i);
+        Prodact(string n, float p);
+        void setId();
         void setName(string n);
         void setPrice(float p);
         int getId();

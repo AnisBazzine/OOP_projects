@@ -8,7 +8,7 @@ class Client : public Person{
     private:
         string email;
     public:
-        Client(int i, string n, string ph, string g,string e);
+        Client(string n, string ph, string g,string e);
         void setEmail(string e);
         string getEmail();
         void print_extra_info();

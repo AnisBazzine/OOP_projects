@@ -8,7 +8,7 @@ private:
     float salary;
     string working_time;
 public:
-    Employee(int i, string n, string ph, string g,float s, string wt);
+    Employee(string n, string ph, string g,float s, string wt);
     void setSalary(float s);
     void setWorkingTime(string wt);
     float getSalary();

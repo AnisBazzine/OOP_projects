@@ -4,15 +4,15 @@
 
 using namespace std;
     Order::Order(){}
-    Order::Order(int i, string d, bool ip, Person p, vector <Prodact> pt){
-        id = i;
+    Order::Order(string d, bool ip, Person p, vector <Prodact> pt){
+        setId();
         data = d;
         is_paid = ip;
         person = p;
         prodacts = pt;
     }
-    void Order::setId(int i){
-        id = i;
+    void Order::setId(){
+        id = counterId++;
     }
     void Order::setData(string d){
         data = d;
@@ -25,6 +25,9 @@ using namespace std;
     }
     void Order::setProdacts(vector <Prodact> pt){
         prodacts = pt;
+    }
+    int Order::getIdPerson(){
+        return person.getId();
     }
     int Order::getId(){
         return id;

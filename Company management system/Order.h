@@ -8,14 +8,15 @@ using namespace std;
 class Order{
     private:
         int id;
+        static int counterId;
         string data;
         bool is_paid;
         Person person;
         vector <Prodact> prodacts;
     public:
         Order();
-        Order(int i, string d, bool ip, Person p, vector <Prodact> pt);
-        void setId(int i);
+        Order(string d, bool ip, Person p, vector <Prodact> pt);
+        void setId();
         void setData(string d);
         void setIsPaid(bool ip);
         void setPerson(Person p);
@@ -23,6 +24,7 @@ class Order{
         int getId();
         string getData();
         bool getIsPaid();
+        int getIdPerson();
         Person getPerson();
         vector <Prodact> getProdacts();
 };

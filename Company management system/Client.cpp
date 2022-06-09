@@ -2,7 +2,7 @@
 #include "Client.h"
 
 using namespace std;
-    Client::Client(int i, string n, string ph, string g,string e):Person(i,n,ph,g){
+    Client::Client(string n, string ph, string g,string e):Person(n,ph,g){
         email = e;
     }
     void Client::setEmail(string e){

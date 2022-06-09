@@ -10,5 +10,4 @@ Start new project by 31-05-2022 from:
 
     3 create Add, Remove, Print functions.
 
-    4 create 
-        Welcome(), for_person(), for_prodact() & for_order() in main file.  
+    4 create Welcome(), for_person(), for_prodact() & for_order() in main.cpp .  
