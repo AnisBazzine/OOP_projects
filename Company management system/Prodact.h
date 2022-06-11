@@ -1,11 +1,12 @@
+#ifndef PRODUCT_H
+#define PRODUCT_H
 #include <iostream>
-
 using namespace std;
 
 class Prodact{
     private:
-        static int counterId;
-        int id;
+        static int counterIdProdact;
+        int idProdact;
         string name;
         float price;
     public:
@@ -18,3 +19,4 @@ class Prodact{
         string getName();
         float getPrice();
 };
+#endif // PRODUCT_H

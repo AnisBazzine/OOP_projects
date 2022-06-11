@@ -1,7 +1,7 @@
-#include <iostream>
 #include "Person.h"
+
 using namespace std;
-    // Setters
+    int Person::counterIdPerson = 1;
     Person::Person(){}
     Person::Person(string n, string ph, string g){
         setId();
@@ -10,19 +10,19 @@ using namespace std;
         gender = g;
     }
     void Person::setId(){    
-        id = counterId++;
+        idPerson = counterIdPerson++;
     }
     void Person::setName(string n){
         name = n;
     }
-    void Person::setPhone(int ph){
+    void Person::setPhone(string ph){
         phone = ph;
     }
     void Person::setGender(string g){
         gender = g;
     }
     void Person::print_extra_info(){
-        cout << "Id : " << id << endl;
+        cout << "Id : " << idPerson << endl;
         cout << "Name : " << name << endl;
         cout << "Phone : " << phone << endl;
         cout << "Gender : " << gender << endl;
@@ -30,7 +30,7 @@ using namespace std;
 
     // Getters
     int Person::getId(){
-        return id;
+        return idPerson;
     }
     string Person::getName(){
         return name;

@@ -1,3 +1,5 @@
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 #include <iostream>
 #include "Person.h"
 
@@ -8,6 +10,7 @@ private:
     float salary;
     string working_time;
 public:
+    Employee();
     Employee(string n, string ph, string g,float s, string wt);
     void setSalary(float s);
     void setWorkingTime(string wt);
@@ -15,3 +18,4 @@ public:
     string getWorkingTime();
     void print_extra_info();
 };
+#endif // EMPLOYEE_H

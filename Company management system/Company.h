@@ -1,5 +1,10 @@
+#ifndef COMPANY_H
+#define COMPANY_H
 #include <iostream>
 #include "Order.h"
+#include "Person.h"
+#include "Prodact.h"
+
 using namespace std;
 
 class Company{
@@ -22,3 +27,4 @@ class Company{
         void print_order_details(int id);
         void print_person_orders(int id);
 };
+#endif // COMPANY_H

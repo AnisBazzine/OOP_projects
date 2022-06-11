@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include "Company.h"
 
 using namespace std;
@@ -16,6 +16,7 @@ using namespace std;
     void Company::add_Order(Order order){
         orders.push_back(order);
         cout << "Id order : " << order.getId() << endl;
+        cout << "Total Prodacts : " << order.getTotalProdacts() << endl;
         cout << "Id person : " << order.getIdPerson() << endl;
         cout << "Add OK\n";
     }

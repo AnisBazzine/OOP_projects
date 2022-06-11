@@ -1,8 +1,8 @@
-#include <iostream>
-#include <vector>
 #include "Order.h"
 
 using namespace std;
+
+    int Order::counterIdOrder = 1;
     Order::Order(){}
     Order::Order(string d, bool ip, Person p, vector <Prodact> pt){
         setId();
@@ -12,7 +12,7 @@ using namespace std;
         prodacts = pt;
     }
     void Order::setId(){
-        id = counterId++;
+        idOrder = counterIdOrder++;
     }
     void Order::setData(string d){
         data = d;
@@ -20,17 +20,17 @@ using namespace std;
     void Order::setIsPaid(bool ip){
         is_paid = ip;
     }
-    void Order::setPerson(Person p){
+    void Order::setPerson(Person *p){
         person = p;
     }
     void Order::setProdacts(vector <Prodact> pt){
         prodacts = pt;
     }
     int Order::getIdPerson(){
-        return person.getId();
+        return person->getId();
     }
     int Order::getId(){
-        return id;
+        return idOrder;
     }
     string Order::getData(){
         return data;
@@ -43,4 +43,7 @@ using namespace std;
     }
     vector <Prodact> Order::getProdacts(){
         return prodacts;
+    }
+    int Order::getTotalProdacts(){
+        return prodacts.size();
     }

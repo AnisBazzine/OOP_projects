@@ -1,7 +1,8 @@
-#include<iostream>
 #include "Client.h"
 
 using namespace std;
+    Client::Client(){
+    }
     Client::Client(string n, string ph, string g,string e):Person(n,ph,g){
         email = e;
     }

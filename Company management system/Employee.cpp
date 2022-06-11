@@ -1,8 +1,8 @@
-#include <iostream>
 #include "Employee.h"
 
 using namespace std;
     // Setters
+    Employee::Employee(){}
     Employee::Employee(string n, string ph, string g,float s, string wt):Person(n,ph,g){
         salary = s;
         working_time = wt;

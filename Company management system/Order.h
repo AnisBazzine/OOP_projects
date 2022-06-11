@@ -1,3 +1,6 @@
+#ifndef ORDER_h
+#define ORDER_h
+
 #include <iostream>
 #include <vector>
 #include "Person.h"
@@ -7,11 +10,11 @@ using namespace std;
 
 class Order{
     private:
-        int id;
-        static int counterId;
+        int idOrder;
+        static int counterIdOrder;
         string data;
         bool is_paid;
-        Person person;
+        Person *person;
         vector <Prodact> prodacts;
     public:
         Order();
@@ -19,12 +22,14 @@ class Order{
         void setId();
         void setData(string d);
         void setIsPaid(bool ip);
-        void setPerson(Person p);
+        void setPerson(Person *p);
         void setProdacts(vector <Prodact> pt);
         int getId();
         string getData();
         bool getIsPaid();
         int getIdPerson();
         Person getPerson();
-        vector <Prodact> getProdacts();
+        vector <Prodact> getProdacts(); 
+        int getTotalProdacts();
 };
+#endif // ORDER_h

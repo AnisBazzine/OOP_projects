@@ -1,7 +1,7 @@
-#include <iostream>
 #include "Prodact.h"
 
 using namespace std;
+    int Prodact::counterIdProdact = 1;
     Prodact::Prodact(){}
     Prodact::Prodact(string n, float p){
         setId();
@@ -9,7 +9,7 @@ using namespace std;
         price = p;
     }
     void Prodact::setId(){
-        id = counterId++;
+        idProdact = counterIdProdact++;
     }
     void Prodact::setName(string n){
         name = n;
@@ -18,7 +18,7 @@ using namespace std;
         price = p;
     }
     int Prodact::getId(){
-        return id;
+        return idProdact;
     }
     string Prodact::getName(){
         return name;
