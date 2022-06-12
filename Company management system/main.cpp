@@ -117,5 +117,5 @@ void choisees(){
     cout << "\t3. Order\n";
     cout << "\t0. Exit\n";
     cout << "\t*****************\n";
-    cout << "Enter choise: ";
+    cout << "\tEnter choise: ";
 }
