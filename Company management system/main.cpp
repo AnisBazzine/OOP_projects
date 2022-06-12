@@ -5,10 +5,11 @@
 using namespace std;
 
 void welcome();// Done
-void choisees();
+void choisees();// Done
 void for_person();
 void for_prodact();
 void for_order();
+
 Company comp;
 int choise;
 int main(){
@@ -40,67 +41,58 @@ void welcome(){
     cout << "****************************************\n";
     cout << "* Welcome to Company management system *\n";
     cout << "****************************************\n";
+    cout << "\n\n";
+    cout << "You can use this system as follows:\n";
+    cout << "\tAdd new client, prodact or order\n";
+    cout << "\tRemove client or employee, prodact or order\n";
+    cout << "\tPrint information about client, employee, prodact or order\n";
+    cout << "\tPrint information about all clients, employees, prodact or orders\n";
 }
 void for_person(){
-    cout << "Person choise\n";
-    // fix list show here!!
-    // 1 add
-    // 2 remove 
-    // 3 print
-    // 0 exit
-    Client c;
-    Employee emp;
+    cout << "\nPerson choise\n";
+    cout << "\n***********\n";
+    cout << "1. Add employee\n";
+    cout << "2. Remove\n";
+    cout << "3. Print\n";
+    cout << "0. Exit\n";
+    cout << "Your choise: ";
+    cin >> choise;
+Person pers;
     float s;
     int id;
-    string n, ph, g, e, wt;
-    switch(choise){
-        case 0:
+    string n, ph, g, wt;
+
+        if(choise == 0){
             cout << "Bye\n";
             exit(0);
-        case 1:
-            cout << "1. Client\n";
-            cout << "2. Employee\n";
-            cin >> choise;
-            if(choise == 1){// client choise
-                cout << "Enter person name: ";
-                cin >> n;
-                cout << "Enter person phone: ";
-                cin >> ph;
-                cout << "Enter gender: ";
-                cin >> g;
-                cout << "Enter email: ";
-                cin >> e;
-                c = Client(n, ph, g, e);
-                comp.add_Person(c);
-            }
-            else if(choise == 2){// employee choise
-                cout << "Enter person name: ";
-                cin >> n;
-                cout << "Enter person phone: ";
-                cin >> ph;
-                cout << "Enter gender: ";
-                cin >> g;
-                cout << "Enter salary: ";
-                cin >> s;
-                cout << "Enter work time: ";
-                cin >> wt;
-                emp = Employee(n, ph, g, s, wt);
-                comp.add_Person(emp);
-            }
-            break;
-        case 2:
-            cout << "Enter person id: ";
+        }
+        else if(choise == 1){
+            cout << "Enter employee name: ";
+            cin >> n;
+            cout << "Enter employee phone: ";
+            cin >> ph;
+            cout << "Enter gender: ";
+            cin >> g;
+            cout << "Enter salary: ";
+            cin >> s;
+            cout << "Enter work time: ";
+            cin >> wt;
+
+            Employee eap(n,ph,g,s,wt);
+            comp.add_Person(eap);
+        }
+        else if(choise == 2){
+            cout << "Enter id: ";
             cin >> id;
             comp.remove_Person(id);
-            break;
-        case 3:
+        }
+        else if(choise == 3){
             cout << "Enter person id: ";
             cin >> id;
             comp.print_person_info(id);
-            break;
-        default:
+        }
+        else
             cout << "Wrong choise\n";
-    }
 }
 void for_prodact(){
     cout << "Prodact choise\n";
@@ -118,7 +110,7 @@ void for_order(){
 }
 void choisees(){
     cout << "\n*****************\n";
-    cout << "\t1. Person\n";
+    cout << "\t1. Employee\n";// person is employee
     cout << "\t2. Prodact\n";
     cout << "\t3. Order\n";
     cout << "\t0. Exit\n";

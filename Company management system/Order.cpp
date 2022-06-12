@@ -20,14 +20,14 @@ using namespace std;
     void Order::setIsPaid(bool ip){
         is_paid = ip;
     }
-    void Order::setPerson(Person *p){
+    void Order::setPerson(Person p){
         person = p;
     }
     void Order::setProdacts(vector <Prodact> pt){
         prodacts = pt;
     }
     int Order::getIdPerson(){
-        return person->getId();
+        return person.getId();
     }
     int Order::getId(){
         return idOrder;

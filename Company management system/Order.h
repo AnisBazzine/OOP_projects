@@ -14,7 +14,7 @@ class Order{
         static int counterIdOrder;
         string data;
         bool is_paid;
-        Person *person;
+        Person person;
         vector <Prodact> prodacts;
     public:
         Order();
@@ -22,7 +22,7 @@ class Order{
         void setId();
         void setData(string d);
         void setIsPaid(bool ip);
-        void setPerson(Person *p);
+        void setPerson(Person p);
         void setProdacts(vector <Prodact> pt);
         int getId();
         string getData();

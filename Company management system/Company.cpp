@@ -135,3 +135,12 @@ using namespace std;
     void Company::print_person_orders(int id){
 
     }
+    void Company::print_tot_orders(){
+        cout << "Orders : " << orders.size() << endl;
+    }
+    void Company::print_tot_prodacts(){
+        cout << "Prodacts : " << prodacts.size() << endl;
+    }
+    void Company::print_tot_persons(){
+        cout << "Persons : " << persons.size() << endl;
+    }
