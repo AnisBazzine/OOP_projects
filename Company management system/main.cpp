@@ -41,12 +41,14 @@ void welcome(){
     cout << "****************************************\n";
     cout << "* Welcome to Company management system *\n";
     cout << "****************************************\n";
-    cout << "\n\n";
-    cout << "You can use this system as follows:\n";
-    cout << "\tAdd new client, prodact or order\n";
-    cout << "\tRemove client or employee, prodact or order\n";
-    cout << "\tPrint information about client, employee, prodact or order\n";
-    cout << "\tPrint information about all clients, employees, prodact or orders\n";
+    cout << "\n";
+    cout << "******************************************************************************\n";
+    cout << "* You can use this system as follows:                                        *\n";
+    cout << "*\tAdd new client, prodact or order                                     *\n";
+    cout << "*\tRemove client or employee, prodact or order                          *\n";
+    cout << "*\tPrint information about client, employee, prodact or order           *\n";
+    cout << "*\tPrint information about all clients, employees, prodact or orders    *\n";
+    cout << "******************************************************************************\n";
 }
 void for_person(){
     cout << "\nPerson choise\n";
@@ -57,7 +59,7 @@ void for_person(){
     cout << "0. Exit\n";
     cout << "Your choise: ";
     cin >> choise;
-Person pers;
+// Person pers;
     float s;
     int id;
     string n, ph, g, wt;
@@ -78,18 +80,18 @@ Person pers;
             cout << "Enter work time: ";
             cin >> wt;
 
-            Employee eap(n,ph,g,s,wt);
-            comp.add_Person(eap);
+            // Employee eap(n,ph,g,s,wt);
+            // comp.add_Person(eap);
         }
         else if(choise == 2){
             cout << "Enter id: ";
             cin >> id;
-            comp.remove_Person(id);
+            // comp.remove_Person(id);
         }
         else if(choise == 3){
             cout << "Enter person id: ";
             cin >> id;
-            comp.print_person_info(id);
+            // comp.print_person_info(id);
         }
         else
             cout << "Wrong choise\n";
@@ -109,11 +111,11 @@ void for_order(){
     // 0 exit
 }
 void choisees(){
-    cout << "\n*****************\n";
+    cout << "\t*****************\n";
     cout << "\t1. Employee\n";// person is employee
     cout << "\t2. Prodact\n";
     cout << "\t3. Order\n";
     cout << "\t0. Exit\n";
-    cout << "\n*****************\n";
+    cout << "\t*****************\n";
     cout << "Enter choise: ";
 }
