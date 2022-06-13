@@ -22,4 +22,8 @@ Start new project by 31-05-2022 from:
 
 7 need to find how to make my vscode work with this project.
 
-8 create function to add vector prodacts in void Company::add_Ordder(Order order) .
+8 create function to add vector prodacts in void Company::add_Ordder(Order order).
+
+9 Delte comment in line below to use the following code in main.cpp:
+
+    139 140 150 156 159 211 224 225 226 238 239 245 251 254

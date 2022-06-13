@@ -2,6 +2,10 @@
 #include "Company.h"
 #include "Employee.h"
 #include "Client.h"
+/*
+Delte comment in line below to use the following code:
+    139 140 150 156 159 211 224 225 226 238 239 245 251 254
+*/
 using namespace std;
 void free();
 void welcome();// Done
