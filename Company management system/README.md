@@ -15,3 +15,7 @@ Start new project by 31-05-2022 from:
     5 find file bug like :
         order.cpp: in function void Order::setPerson(Person *person) : delete *
         order.h in line 17 Person *person; : delete *
+
+    6 My vscode is not working with this project when use header file  like : company.h in function void Company::add_Person(Person person) in main file.
+    7 need to find how to make my vscode work with this project.
+    8 create function to add vector prodacts in void Company::add_Ordder(Order order) .
