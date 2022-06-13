@@ -134,7 +134,7 @@ using namespace std;
             cout << "No Order with this id\n";
         }
     }
-    void Company::print_person_orders(int id){
+    void Company::print_person_orders(int id){// not implemented
 
     }
     void Company::print_tot_orders(){
