@@ -14,6 +14,8 @@ using namespace std;
         cout << "Add OK\n";
     }
     void Company::add_Order(Order order){
+        persons.push_back(order.getPerson());
+        // add vector prodacts ???
         orders.push_back(order);
         cout << "Id order : " << order.getId() << endl;
         cout << "Total Prodacts : " << order.getTotalProdacts() << endl;
@@ -139,7 +141,7 @@ using namespace std;
         cout << "Orders : " << orders.size() << endl;
     }
     void Company::print_tot_prodacts(){
-        cout << "Prodacts : " << prodacts.size() << endl;
+        cout << "Total prodacts : " << prodacts.size() << endl;
     }
     void Company::print_tot_persons(){
         cout << "Persons : " << persons.size() << endl;
