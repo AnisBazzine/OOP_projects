@@ -5,6 +5,7 @@
 /*
 Delte comment in line below to use the following code:
     139 140 150 156 159 211 224 225 226 238 239 245 251 254
+test my code here and delete one by one comments to find the bug
 */
 using namespace std;
 void free();
@@ -63,7 +64,6 @@ void for_person(){ // Done
     cout << "0. Exit\n";
     cout << "Your choise: ";
     cin >> choise;
-// Person pers;
     float s;
     int id;
     string n, ph, g, wt;
@@ -85,26 +85,26 @@ void for_person(){ // Done
             cout << "Enter work time: ";
             cin >> wt;
 
-            // Employee eap(n,ph,g,s,wt);
-            // comp.add_Person(eap);
+            Employee eap(n,ph,g,s,wt);
+            comp.add_Person(eap);
 
-            { // test my code then delete this block
-                cout << "Name: " << n << endl;
-                cerr << "Phone: " << ph << endl;
-                cerr << "Gender: " << g << endl;
-                cerr << "Salary: " << s << endl;
-                cout << "Work time: " << wt << endl;
-            }
+            // { // test my code then delete this block
+            //     cout << "Name: " << n << endl;
+            //     cerr << "Phone: " << ph << endl;
+            //     cerr << "Gender: " << g << endl;
+            //     cerr << "Salary: " << s << endl;
+            //     cout << "Work time: " << wt << endl;
+            // }
         }
         else if(choise == 2){
             cout << "Enter id: ";
             cin >> id;
-            // comp.remove_Person(id);
+            comp.remove_Person(id);
         }
         else if(choise == 3){
             cout << "Enter person id: ";
             cin >> id;
-            // comp.print_person_info(id);
+            comp.print_person_info(id);
         }
         else
             cout << "Wrong choise\n";
@@ -136,33 +136,33 @@ void for_prodact(){// Done
         cout << "Enter prodact price: ";
         cin >> p;
 
-        // Prodact pr(n,p);
-        // comp.add_Prodact(pr);
-        {
-            cout << "Name: " << n << endl;
-            cerr << "Price: " << p << endl;
-        }
+        Prodact pr(n,p);
+        comp.add_Prodact(pr);
+        // {
+        //     cout << "Name: " << n << endl;
+        //     cerr << "Price: " << p << endl;
+        // }
     }
     else if(choise == 2){
         int id;
         cout << "Enter id: ";
         cin >> id;
-        // comp.remove_Prodact(id);
+        comp.remove_Prodact(id);
     }
     else if(choise == 3){
         int id;
         cout << "Enter prodact id: ";
         cin >> id;
-        // comp.print_prodact_details(id);
+        comp.print_prodact_details(id);
     }
     else if(choise == 4){
-        // comp.print_tot_prodacts();
+        comp.print_tot_prodacts();
     }
     else
         cout << "Wrong choise\n";
 }
 
-void for_order(){ // Need to work
+void for_order(){ // Done
     // 1 add
     // 2 remove 
     // 3 print 
@@ -208,7 +208,7 @@ void for_order(){ // Need to work
         free();
         cout << "Enter Client email: ";
         getline(cin,e);
-        // Client clt(nc,ph,g,e);
+        Client clt(nc,ph,g,e);
         // Prodact
         
         cout << "Total prodact: ";
@@ -219,46 +219,45 @@ void for_order(){ // Need to work
             free();
             cout << "Enter prodact price: ";
             cin >> p;
-
             free();
-            // Prodact prd(np,p);
-            // pr.push_back(prd);
-            // cout << "Prodact " << i + 1 << " added, ID: " << pr[i].getId() << "\n";
+            Prodact prd(np,p);
+            pr.push_back(prd);
+            cout << "Prodact " << i + 1 << " added, ID: " << pr[i].getId() << "\n";
             
         }
-        {// test my code then delete this block
-            cout << "Date: " << d << endl;
-            cout << "Is paid: " << isp << endl;
-            cout << "Client name: " << nc << endl;
-            cout << "Client phone: " << ph << endl;
-            cout << "Client gender: " << g << endl;
-            cout << "Client email: " << e << endl;
-            cout << "Total prodact enter is: " << tot_prodacts << endl;
-        }
-        // Order ord(d,isp,clt,pr);
-        // comp.add_Order(ord);
+        // {// test my code then delete this block
+        //     cout << "Date: " << d << endl;
+        //     cout << "Is paid: " << isp << endl;
+        //     cout << "Client name: " << nc << endl;
+        //     cout << "Client phone: " << ph << endl;
+        //     cout << "Client gender: " << g << endl;
+        //     cout << "Client email: " << e << endl;
+        //     cout << "Total prodact enter is: " << tot_prodacts << endl;
+        // }
+        Order ord(d,isp,clt,pr);
+        comp.add_Order(ord);
     }
     else if(choise == 2){
         int id;
         cout << "Enter id: ";
         cin >> id;
-        // comp.remove_Order(id);
+        comp.remove_Order(id);
     }
     else if(choise == 3){
         int id;
         cout << "Enter order id: ";
         cin >> id;
-        // comp.print_order_details(id);
+        comp.print_order_details(id);
     }
     else if(choise == 4){
-        // comp.print_tot_orders();
+        comp.print_tot_orders();
     }
     else
         cout << "Wrong choise\n";
 }
 void choisees(){
     cout << "*****************\n";
-    cout << "1. Employee\n";// person is employee
+    cout << "1. Person\n";// person is employee
     cout << "2. Prodact\n";
     cout << "3. Order\n";
     cout << "0. Exit\n";
