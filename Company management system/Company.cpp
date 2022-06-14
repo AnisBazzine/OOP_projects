@@ -29,7 +29,7 @@ using namespace std;
             return;
         }
         else {
-            for(int i = 1; i <= prodacts.size(); i++){
+            for(int i = 0; i <= prodacts.size(); i++){
                 if(prodacts[i].getId() == id){
                     prodacts.erase(prodacts.begin() + i);
                     cout << "Remove Ok\n";
@@ -45,7 +45,7 @@ using namespace std;
             return;
         }
         else {
-            for(int i = 1; i <= persons.size(); i++){
+            for(int i = 0; i <= persons.size(); i++){
                 if(persons[i].getId() == id){
                     persons.erase(persons.begin() + i);
                     cout << "Remove Ok\n";
@@ -61,7 +61,7 @@ using namespace std;
             return;
         }
         else {
-            for(int i = 1; i <= orders.size(); i++){
+            for(int i = 0; i <= orders.size(); i++){
                 if(orders[i].getId() == id){
                     orders.erase(orders.begin() + i);
                     cout << "Remove Ok\n";
@@ -78,7 +78,7 @@ using namespace std;
             return;
         }
         else {
-            for(int i = 1; i <= persons.size(); i++)
+            for(int i = 0; i <= persons.size(); i++)
                 if(persons[i].getId() == id){
                     cout << "Person info print\n";
                     cout << "Id : " << persons[i].getId() << endl;
@@ -98,7 +98,7 @@ using namespace std;
             return;
         }
         else {
-            for(int i = 1; i <= prodacts.size(); i++)
+            for(int i = 0; i <= prodacts.size(); i++)
                 if(prodacts[i].getId() == id){
                     cout << "Prodact details print\n";
                     cout << "Id : " << prodacts[i].getId() << endl;
@@ -116,7 +116,7 @@ using namespace std;
             return;
         }
         else{
-            for(int i = 1; i <= orders.size(); i++)
+            for(int i = 0; i <= orders.size(); i++)
                 if(orders[i].getId() == id){
                     Person p(orders[i].getPerson());
                     cout << "Order details print\n";
@@ -134,8 +134,31 @@ using namespace std;
             cout << "No Order with this id\n";
         }
     }
-    void Company::print_person_orders(int id){// not implemented
-
+    void Company::print_person_orders(int id){// implemented
+        // go to order and check id person
+        // then print order details
+        bool check = 0;
+        string name = "";
+        if(orders.size() <= 0){
+            cout << "Empty Order\n";
+            return;
+        }
+        else{
+            for(int i = 0; i <= orders.size(); i++)
+                if(orders[i].getIdPerson() == id){
+                    check = true;
+                    name = orders[i].getPerson().getName();
+                    cout << "*************\n";
+                    cout << "Id : " << orders[i].getId() << endl;
+                    cout << "Data : " << orders[i].getData() << endl;
+                    cout << "Status : " << (orders[i].getIsPaid() ? "Paid" : "Not paid") << endl;
+                    cout << "Total prodacts : " << orders[i].getTotalProdacts() << endl;
+                }
+            cout << "*************\n";
+            cout << "Client : " << name << endl;
+            if(check == 0)
+                cout << "No client with this id\n";
+        }
     }
     void Company::print_tot_orders(){
         cout << "Orders : " << orders.size() << endl;
