@@ -17,10 +17,10 @@ class Person{
         void setName(string n);
         void setPhone(string ph);
         void setGender(string g);
-        void print_extra_info();
         int getId();
         string getName();
         string getPhone();
         string getGender();
+        void print_extra_info();
 };
 #endif // PERSON_H
