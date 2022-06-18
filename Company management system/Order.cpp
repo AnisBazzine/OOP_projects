@@ -4,11 +4,11 @@ using namespace std;
 
     int Order::counterIdOrder = 1;
     Order::Order(){}
-    Order::Order(string d, bool ip, Person p, vector <Prodact> pt){
+    Order::Order(string d, bool ip, Client c, vector <Prodact> pt){
         setId();
         data = d;
         is_paid = ip;
-        person = p;
+        client = c;
         prodacts = pt;
     }
     void Order::setId(){
@@ -20,14 +20,14 @@ using namespace std;
     void Order::setIsPaid(bool ip){
         is_paid = ip;
     }
-    void Order::setPerson(Person p){
-        person = p;
+    void Order::setClient(Client c){
+        client = c;
     }
     void Order::setProdacts(vector <Prodact> pt){
         prodacts = pt;
     }
-    int Order::getIdPerson(){
-        return person.getId();
+    int Order::getIdClient(){
+        return client.getId();
     }
     int Order::getId(){
         return idOrder;
@@ -38,8 +38,8 @@ using namespace std;
     bool Order::getIsPaid(){
         return is_paid;
     }
-    Person Order::getPerson(){
-        return person;
+    Client Order::getClient(){
+        return client;
     }
     vector <Prodact> Order::getProdacts(){
         return prodacts;

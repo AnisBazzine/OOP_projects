@@ -3,9 +3,8 @@
 
 #include <iostream>
 #include <vector>
-#include "Person.h"
 #include "Prodact.h"
-
+#include "Client.h"
 using namespace std;
 
 class Order{
@@ -14,23 +13,23 @@ class Order{
         static int counterIdOrder;
         string data;
         bool is_paid;
-        Person person;
+        Client client;
         vector <Prodact> prodacts;
     public:
         Order();
-        Order(string d, bool ip, Person p, vector <Prodact> pt);
+        Order(string d, bool ip, Client c, vector <Prodact> pt);
         
         void setId();
         void setData(string d);
         void setIsPaid(bool ip);
-        void setPerson(Person p);
+        void setClient(Client c);
         void setProdacts(vector <Prodact> pt);
 
         int getId();
         string getData();
         bool getIsPaid();
-        int getIdPerson();
-        Person getPerson();
+        int getIdClient();
+        Client getClient();
         vector <Prodact> getProdacts(); 
         int getTotalProdacts();
 };
