@@ -1,7 +1,9 @@
 # Library-mangement-system
 Create Library management system with C++ and OOP concept.
 
-Developement by: Anis bazzine start do this homework by 23-09-2021 and complated by 31-05-2022 the homework give by :
+Developement by: **Anis bazzine** 
+
+Start do this homework by 23-09-2021 and complated by 31-05-2022 the homework give by :
 
 	https://harmash.com/tutorials/algorithms-and-data-structure/data-structure-test-1
 
