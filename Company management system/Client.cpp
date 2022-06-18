@@ -13,6 +13,5 @@ using namespace std;
         return email;
     }
     void Client::print_extra_info(){
-        Person::print_extra_info();
         cout << "Email : " <<  email << endl;
     }

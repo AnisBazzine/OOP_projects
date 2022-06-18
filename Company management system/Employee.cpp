@@ -21,7 +21,6 @@ using namespace std;
         return working_time;
     }
     void Employee::print_extra_info(){
-        Person::print_extra_info();
         cout << "Salary : " << salary << endl;
         cout << "Working time : " << working_time << endl;
     }
