@@ -21,12 +21,7 @@ using namespace std;
     void Person::setGender(string g){
         gender = g;
     }
-    void Person::print_extra_info(){
-        cout << "Id : " << idPerson << endl;
-        cout << "Name : " << name << endl;
-        cout << "Phone : " << phone << endl;
-        cout << "Gender : " << gender << endl;
-    }
+    void Person::print_extra_info(){    }
 
     // Getters
     int Person::getId(){

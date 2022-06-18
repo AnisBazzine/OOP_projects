@@ -21,6 +21,6 @@ class Person{
         string getName();
         string getPhone();
         string getGender();
-        void print_extra_info();
+        virtual void print_extra_info();
 };
 #endif // PERSON_H
