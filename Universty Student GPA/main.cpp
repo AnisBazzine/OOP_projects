@@ -58,6 +58,7 @@ int main(){
 }
 void welcomeSecrean(){
     cout << "Welcome to your Universty Student GPA\n";
+    cout << "Calculating your university average based on Algerian universities\n";
     cout << "======================================\n";
 }
 void data_ask(){
