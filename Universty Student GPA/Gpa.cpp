@@ -4,7 +4,7 @@
 using namespace std;
 
     Gpa::Gpa(){    }
-    Gpa::Gpa(vector <Unite> unites, int totalUnites){
+    Gpa::Gpa(vector <Unite> unites, float totalUnites){
         this->unites = unites;
         this->totUnites = totalUnites;
     }
@@ -20,27 +20,32 @@ using namespace std;
     float Gpa::getTotUnites(){
         return totUnites;
     }
+    float Gpa::getCoff(){
+        float totalCoff = 0;
+        for(int i = 0; i < totUnites; i++)
+            totalCoff += unites[i].getTotalCoff();
+        return totalCoff;
+    }
     void Gpa::print(){
         float gpa = 0;
         float totAvgUnite  = 0;
-        int countFailcourse = 0;
+        int countFailCourse = 0;
         for(int i = 0; i < totUnites; i++)
-            totAvgUnite += unites[i].getAvgUnite();
-        gpa =  totAvgUnite / totAvgUnite;
+            totAvgUnite += unites[i].getAvgUnite() * unites[i].getTotalCoff();
+        gpa =  totAvgUnite / getCoff();
         if(gpa >= 10)
             cout << "Gpa : " << gpa << endl;
         else{
             for(int i = 0; i < totUnites; i++){
                 vector <Course> tempCourse = unites[i].getCourses();
                 for(int k = 0; k < unites[i].getTotalCourses(); k++){
-                    if(tempCourse[k].getFinalAvg() < 10){
-                        countFailcourse++;
-                        cout << countFailcourse << " ";
+                    if(tempCourse[k].getAvg() < 10){
+                        cout << countFailCourse++ << " ";
                         tempCourse[k].printFailInfo();
                     }
                 }
             }
-        cout << "Total Fail Course : " << countFailcourse << endl;
+        cout << "Total Fail Course : " << countFailCourse << endl;
         }
         // print the gpa
         // print the course fail 

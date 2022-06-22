@@ -9,13 +9,13 @@ private:
     float totUnites;
 public:
     Gpa();
-    Gpa(vector <Unite> unites, int totalUnites);
+    Gpa(vector <Unite>, float);
     
-    void setUnites(vector <Unite> unites);
-    void setTotUnites(float totUnites);
-
+    void setUnites(vector <Unite>);
+    void setTotUnites(float);
+    void addUnite(Unite);
     vector <Unite> getUnites();
     float getTotUnites();
-
+    float getCoff();
     void print();
 };

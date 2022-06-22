@@ -3,9 +3,7 @@
 
 using namespace std;
 
-    Unite::Unite(){
-
-    }
+    Unite::Unite(){    }
     Unite::Unite(vector <Course> courses, int totalCourses){
         this->courses = courses;
         this->totalCourses = totalCourses;
@@ -17,24 +15,28 @@ using namespace std;
     void Unite::setCourses(vector <Course> courses){
         this->courses = courses;
     }
-
-    int Unite::getTotalCourses(){
+    float Unite::getTotalCourses(){
         return totalCourses;
     }
     vector <Course> Unite::getCourses(){
         return courses;
     }
-    int Unite::getTotalCoff(){
-        int totalCoff = 0;
+    float Unite::getTotalCoff(){
+        float totalCoff = 0;
         for(int i = 0; i < totalCourses; i++)
             totalCoff += courses[i].getCoff();
-        
         return totalCoff;
     }
     float Unite::getAvgUnite(){
-        float avgUnite = 0;
+        float totUnite = 0;
         for(int i = 0; i < totalCourses; i++)
-            avgUnite += courses[i].getFinalAvg();
+            totUnite += courses[i].getFinalAvg();
         
-        return avgUnite / getTotalCoff();
+        return totUnite / getTotalCoff();
+    }
+    float Unite::getCridets(){
+        float totalCridets = 0;
+        for(int i = 0; i < totalCourses; i++)
+            totalCridets += courses[i].getFinalCredit();
+        return totalCridets;
     }

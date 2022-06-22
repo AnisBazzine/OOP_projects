@@ -1,27 +1,31 @@
 #include <iostream>
 #include <string.h>
-
+using namespace std;
 class Course{
 private:
-    char * nameCourse;
+    string nameCourse;
     float Td, exam;
-    int coff; // coefficient
-    int credit;
+    float coff; // coefficient
+    float credit;
 public:
     Course();
-    Course(char * nameCourse, float Td, float exam, int coff, int credit);
+    Course(string n, float, float, float, float);
     
-    void setTd(float Td);
-    void setExam(float exam);
-    void setCoff(int coff);
-    void setCredit(int credit);
+    void setName(string n);
+    void setTd(float);
+    void setExam(float);
+    void setCoff(float);
+    void setCredit(float);
 
+    string getName();
     float getTd();
     float getExam();
-    int getCoff();
-    int getCredit();
-    int getFinalCredit();
+    float getCoff();
+    float getCredit();
+    float getFinalCredit();
     float getFinalAvg();
+    float getAvg();
+    
     void printCourseInfo();
     void printFailInfo();
 };
