@@ -57,12 +57,12 @@ int main(){
     return 0;
 }
 void welcomeSecrean(){
-    cout << "Welcome to your GPA calculator student\n";
+    cout << "Welcome to your Universty Student GPA\n";
     cout << "======================================\n";
 }
 void data_ask(){
-    cout << "Notes that if you don't have TD in this course, just enter exam point.\n";
-    cout << "how many unite in your gpa : ";
+    cout << "Notes that if you don't have TD in this course,\njust enter exam point.\n";
+    cout << "How many unite in your gpa : ";
     cin >> totUnite;
     gpa.setTotUnites(totUnite);
     vector <Unite> vectorUnite;
