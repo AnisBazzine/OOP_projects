@@ -26,11 +26,19 @@ first ask
     Else
         Print gpa, cridet and  fail courses with their gpa
 */
+/*
+I think it's a great overall program but it's missing some user experience touches:
+    1- one example for the people that don't know how to use it
+    2- shorten the time of insertion (it takes a lot of time to insert the grades) || Done
+    3- make some validation: any number or character can inserted
+
+*/
 Gpa gpa;
 int totUnite = 0, courseInUnite = 0, choise;
 string courseName;
 int credit  = 0, coff = 0;
 float TdPoint = 0, examPoint = 0;
+void Guide(); 
 void welcomeSecrean();
 void data_ask();
 void print_list();
@@ -60,6 +68,12 @@ void welcomeSecrean(){
     cout << "Welcome to your Universty Student GPA\n";
     cout << "Calculating your university average based on Algerian universities\n";
     cout << "======================================\n";
+    Guide();
+}
+void Guide(){
+    cout << "How to use the programme:\n";
+    cout << "Course name * Credit * coefficient * TD * Exam\n";
+    cout << "    Math         5        2         14.5   15\n";
 }
 void data_ask(){
     cout << "Notes that if you don't have TD in this course,\njust enter exam point.\n";
@@ -72,15 +86,11 @@ void data_ask(){
         cin >> courseInUnite;
         vector <Course> vectorCourse; 
         for(int j = 0; j < courseInUnite; j++){
-            cout << "course name ";
+            cout << "Course name * Credit * Coff * TD * Exam\n";
             cin >> courseName;
-            cout << "credit ";
             cin >> credit;
-            cout << "coff ";
             cin >> coff;
-            cout << "TdPoint ";
             cin >> TdPoint;
-            cout << "examPoint ";
             cin >> examPoint;
             Course vc(courseName,TdPoint,examPoint,coff,credit);
             vectorCourse.push_back(vc);
