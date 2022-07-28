@@ -1,6 +1,7 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 #include <iostream>
+using namespace std;
 
 class Client{
     static int clientIdCounter;

@@ -5,7 +5,8 @@ using namespace std;
 int choise;
     
 int main(){
-    Hotel hotel;
-    hotel.mainMenu();
+    // Hotel hotel;
+    // hotel.mainMenu();
+    cout << "Hotel Reservation System worek !\n" << endl;
     return 0;
 }

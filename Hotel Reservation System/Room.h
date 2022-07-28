@@ -2,6 +2,7 @@
 #define ROOM_H
 #include "Client.h"
 #include <iostream>
+using namespace std;
     /*
     type   capacity
     Normal single room: $100
