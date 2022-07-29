@@ -35,5 +35,6 @@ public:
     void availbeleRoom();    //to display  available room  
     void reservedRoom();    //to display reserved room
     void TotalPriceOfToday();     //to calculate the total income of today
+	void free();
 };
 #endif // HOTEL_H_INCLUDED

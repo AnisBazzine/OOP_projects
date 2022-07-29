@@ -94,11 +94,9 @@ using namespace std;
     }
     void Room::printInfo(){
         cout << "Room ID          : " << roomId << endl;
-        cout << "Room Type        : " << typeRoom << endl;
-        cout << "Room Capacity    : " << capacity << endl;
-        cout << "Check-in Date    : " << dayIn << "-" << monthIn << "-" << yearIn << endl;
-        cout << "Check-out Date   : " << dayOut << "-" << monthOut << "-" << yearOut << endl;
-        cout << "Is Available     : " << isAvailable << endl;
+        cout << "Number of Nights : " << getDays() << endl;
+        cout << "Night Cost       : " << getFees() << endl;
+        cout << "Total price      : " << getTotalPrice() << endl;
     }
     void Room::printGloblalInfo(){
         cout << roomId << "\t"<< typeRoom << "\t" << capacity << "\t" << dayIn << "-" << monthIn << "-" << yearIn << "\t" << dayOut << "-" << monthOut << "-" << yearOut << "\t" << isAvailable << endl;

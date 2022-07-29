@@ -12,8 +12,8 @@ class Client{
     string adress;
     string city;
     string nationality;
-    int passportNumber;
-    int cardNumber, cvcCode;
+    unsigned long int passportNumber, cardNumber;
+    int cvcCode;
 public:
     Client();
     Client(string name, string phone, string email, string adress, string city, string nationality, int passportNumber, int cardNumber, int cvcCode);

@@ -52,16 +52,8 @@ using namespace std;
         return cvcCode;
     }
     void Client::printInfo(){
-        cout << "Client ID        : " << clientId << endl;
-        cout << "Name             : " << name << endl;
-        cout << "Phone            : " << phone << endl;
-        cout << "Email            : " << email << endl;
-        cout << "Adress           : " << adress << endl;
-        cout << "City             : " << city << endl;
-        cout << "Nationality      : " << nationality << endl;
-        cout << "Passport Number  : " << passportNumber << endl;
-        cout << "Visa Card Number : " << cardNumber << endl;
-        cout << "Days             : " << daylight << endl;// daylight !!?
+        cout << "Client ID : " << clientId << endl;
+        // cout << "Days      : " << daylight << endl;// daylight !!?
     }
     void Client::printGloblalInfo(int roomId, int days, float fees){
         //  ClientId roomId name email address city nationap passpor phone days fees
