@@ -23,6 +23,7 @@ using namespace std;
 class Hotel{
     vector <Room> rooms[60];
     int roomAvailable;
+    int choise;
 public:
     Hotel();
     int getRoomAvailable();

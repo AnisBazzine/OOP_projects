@@ -190,7 +190,7 @@ using namespace std;
         }
     }
     void Hotel::mainMenu(){ // done
-        while(choise != 0){
+        do{
             cout << "1. Check In\n";
             cout << "2. Check Out\n";
             cout << "3. Client list\n";
@@ -200,34 +200,26 @@ using namespace std;
             cout << "7. Income of today\n";
             cout << "0. Exit\n"; 
             cin >> choise;
-        }
-        switch (choise){
-            case 0:
+            if(choise == 0)
                 exit(0);
-            case 1:
+            else if(choise == 1)
                 checkIn();
-                break;
-            case 2:
+            else if(choise == 2)
                 checkOut();
-                break;
-            case 3:
+            else if(choise == 3)
                 displayClient();
-                break;
-            case 4:
+            else if(choise == 4)
                 availbeleRoom();
-                break;
-            case 5:
+            else if(choise == 5)
                 displayRoom();      
-                break;
-            case 6:
+            else if(choise == 6)
                 reservedRoom();
-                break;
-            case 7:
+            else if(choise == 7)
                 TotalPriceOfToday();
-                break;
-            default:
-                break;
-        }
+            else 
+                cout << "Sorry, we don't have this option\n";
+        }while(choise != 0);
+        
     }
     void Hotel::displayClient(){ // done
         cout << "Room ID\t" << "Client ID\t" << "Name\t" << "Email\t" << "Adress\t" << "City\t" << "Nationality\t" << "Passport Number\t" << "Phone number\t" << "Days\t" << "Fees\t\n";
