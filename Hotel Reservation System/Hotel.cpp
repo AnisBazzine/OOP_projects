@@ -4,15 +4,8 @@ using namespace std;
 
 
     Hotel::Hotel(){ // done
-        // setUP The rooms in the hotel
-        // calcul the avaible room in the hotel
-        // set the type for each room          || done
-        // set the id for each room            || done
-        // set every room is available = true  || done
-        // set the capacity for each room      || done
-        // set the fees for each room          || done
 
-        roomAvailable = rooms->size();
+        roomAvailable = rooms->size(); 
         int sizeCapacity = rooms->size() / 6; //  sizeCapacity = 10
 
         for(int i = 0; i < rooms->size(); i++){
@@ -32,6 +25,7 @@ using namespace std;
             else if(i < sizeCapacity * 6)
                 rooms->at(i).setTypeRoom("V") ,rooms->at(i).setCapacity("T"), rooms->at(i).setFees(350);
         }
+        cout << "Hotel() are done" << endl;
     }
     int Hotel::getRoomAvailable(){
         return roomAvailable;

@@ -1,6 +1,7 @@
 #ifndef HOTEL_H
 #define HOTEL_H
 #include <string>
+#include <iostream>
 #include <vector>
 #include "Room.h"
 using namespace std;
