@@ -3,9 +3,7 @@
 
 using namespace std;
 
-    Room::Room(){
-
-    }
+    Room::Room(){    }
     Room::Room(int dayIn, int monthIn, int yearIn, int dayOut, int monthOut, int yearOut, Client client){
         this->dayIn = dayIn;
         this->monthIn = monthIn;
