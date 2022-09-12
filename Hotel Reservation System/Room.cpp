@@ -40,7 +40,7 @@ using namespace std;
     void Room::setRoomId(int roomId){
         this->roomId = roomId;
     }
-    void Room::setFees(float){
+    void Room::setFees(float fees){
         this->fees = fees;
     }
     int Room::getDays(){

@@ -1,8 +1,7 @@
 #ifndef HOTEL_H
 #define HOTEL_H
 #include <string>
-#include <iostream>
-#include <vector>
+#include <array>
 #include "Room.h"
 using namespace std;
 
@@ -22,8 +21,8 @@ using namespace std;
     // 41 => 50 Vip double room: 10
     // 51 => 60 Vip triple room: 10
 class Hotel{
-    vector <Room> rooms[60];
-    int roomAvailable;
+    array <Room, 60> rooms;
+	int roomAvailable;
     int choise;
 public:
     Hotel();
