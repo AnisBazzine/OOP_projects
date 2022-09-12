@@ -2,9 +2,7 @@
 #include "Hotel.h"
 using namespace std;
 
-
     Hotel::Hotel(){ // done
-
         roomAvailable = rooms.size(); 
         int sizeCapacity = rooms.size() / 6; //  sizeCapacity = 10
 
@@ -25,8 +23,6 @@ using namespace std;
             else if(i < sizeCapacity * 6)
                 rooms.at(i).setTypeRoom("V") ,rooms.at(i).setCapacity("T"), rooms.at(i).setFees(350);
         }
-		cout << "rooms size : " <<  rooms.size() << endl;
-        cout << "Hotel::Hotel() are done" << endl;
     }
     int Hotel::getRoomAvailable(){
         return roomAvailable;
@@ -167,11 +163,6 @@ using namespace std;
             cout << "Sorry, we don't have this room type and capacity\n";
         }
         clientInHotel.printInfo();
-		cout << "*******\n";
-		cout << "rooms.at(idcounter).printInfr();\n";
-		cout << "idCounter : " << idCounter << endl;
-		cout << "Rooms.size() : " << rooms.size() << endl;
-		cout << "*******\n";
         rooms.at(idCounter).printInfo();
 		cout << "After printed\nrooms.at(idcounter).printInfr();\n";
     }
@@ -228,6 +219,7 @@ using namespace std;
     }
     void Hotel::displayClient(){ // done
         cout << "Room ID\t" << "Client ID\t" << "Name\t" << "Email\t" << "Adress\t" << "City\t" << "Nationality\t" << "Passport Number\t" << "Phone number\t" << "Days\t" << "Fees\t\n";
+        cout << "11\t" << "22\t" << "Anis Bazzine" << "anisbazzine@gmail.com" << "adress in Ouargal" << "Ouargla" << "Algerine" << "123456789" << "0555555555" << "5" << "5000" << endl;
         for(int i = 0; i < rooms.size(); i++){
             if(!rooms.at(i).getIsAvailable()){
                 rooms.at(i).getClient().printGloblalInfo(i + 1, rooms.at(i).getDays(), rooms.at(i).getTotalPrice());
