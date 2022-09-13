@@ -3,7 +3,15 @@
 
 using namespace std;
 
-    Room::Room(){    }
+    Room::Room(){
+        typeRoom = "";
+        capacity = "";
+        roomId = 0;
+        fees = 0;
+        isAvailable = true;
+        dayIn = 01, monthIn = 01, yearIn = 2222;
+        dayOut = 01, monthOut = 01, yearOut = 2222;
+        }
     Room::Room(int dayIn, int monthIn, int yearIn, int dayOut, int monthOut, int yearOut, Client client){
         this->dayIn = dayIn;
         this->monthIn = monthIn;
@@ -30,10 +38,18 @@ using namespace std;
         this->isAvailable = isAvailable;
     }
     void Room::setTypeRoom(string typeRoom){
-        this->typeRoom = typeRoom;
+        if(typeRoom == "N" || typeRoom == "n")
+            this->typeRoom = "Normal";
+        else if(typeRoom == "V" || typeRoom == "v")
+            this->typeRoom = "Vip";
     }
     void Room::setCapacity(string capacity){
-        this->capacity = capacity;
+        if(capacity == "S" || capacity == "s")
+            this->capacity = "Single";
+        else if(capacity == "D" || capacity == "d")
+            this->capacity = "Double";
+        else if(capacity == "T" || capacity == "t")
+            this->capacity = "Triple";
     }
     void Room::setRoomId(int roomId){
         this->roomId = roomId;

@@ -4,7 +4,15 @@
 using namespace std;
     int Client::clientIdCounter = 1;
     Client::Client(){
-
+        clientId = 0;
+        name = "My name";
+        phone = "0550000000";
+        email = "contact.admin@campany.org";
+        adress = "Defulat adress";
+        city = "Ouargla";
+        nationality = "Algerine";
+        passportNumber = 111111111;
+        cardNumber = 111111111, cvcCode = 111;
     }
     Client::Client(string name, string phone, string email, string adress, string city, string nationality, int passportNumber, int cardNumber, int cvcCode){
         Client::setClientId();

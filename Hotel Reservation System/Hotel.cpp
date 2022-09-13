@@ -219,7 +219,7 @@ using namespace std;
     }
     void Hotel::displayClient(){ // done
         cout << "Room ID\t" << "Client ID\t" << "Name\t" << "Email\t" << "Adress\t" << "City\t" << "Nationality\t" << "Passport Number\t" << "Phone number\t" << "Days\t" << "Fees\t\n";
-        cout << "11\t" << "22\t" << "Anis Bazzine" << "anisbazzine@gmail.com" << "adress in Ouargal" << "Ouargla" << "Algerine" << "123456789" << "0555555555" << "5" << "5000" << endl;
+        // cout << "11\t" << "22\t" << "Anis Bazzine" << "anisbazzine@gmail.com" << "adress in Ouargal" << "Ouargla" << "Algerine" << "123456789" << "0555555555" << "5" << "5000" << endl;
         for(int i = 0; i < rooms.size(); i++){
             if(!rooms.at(i).getIsAvailable()){
                 rooms.at(i).getClient().printGloblalInfo(i + 1, rooms.at(i).getDays(), rooms.at(i).getTotalPrice());
@@ -229,7 +229,7 @@ using namespace std;
     void Hotel::displayRoom(){ // done
         cout << "ID\t" << "Type\t" << "Capacity\t" << "Check-in Date\t" << "Check-out Date\t" << "Is Available ?\t\n";
         for(int i = 0; i < rooms.size(); i++){
-            if(rooms.at(i).getIsAvailable())
+            if(i < rooms.size())
                 rooms.at(i).printGloblalInfo();
         }
     }
@@ -242,11 +242,11 @@ using namespace std;
         //           single VIP room : 25% ex...
         // availble rooms 80% of the total rooms 60 
         int roomSpace = rooms.size();
-        cout << "You want with all info or summury info ?\n";
-        cout << "1. All info\n";
-        cout << "2. Summury info\n";
-        cin >> choise;
-        if(choise == 1){
+        // cout << "You want with all info or summury info ?\n";
+        // cout << "1. All info\n";
+        // cout << "2. Summury info\n";
+        // cin >> choise;
+        // if(choise == 1){
             int countRoom = 0;
             int counter = 0;
             for(int i = 0; i < rooms.size(); i++){
@@ -255,47 +255,46 @@ using namespace std;
                     countRoom++;
                 }
                 if(counter == rooms.size() / 6){
-                    cout << rooms.at(i).getType() << " " << rooms.at(i).getCapacity() <<  " : " << countRoom * 100 / (roomSpace / 6) << "%\n";
+                    cout << rooms.at(i).getType() << " " << rooms.at(i).getCapacity() <<  " Room : " << countRoom * 100 / (roomSpace / 6) << "%\n";
                     countRoom = 0;
                     counter = 0;
                 }
             }
-            cout << "The available room is         : " << getRoomAvailable() << " out of " << roomSpace << endl; // 45 out of 60
+            cout << "    The available room is     : " << getRoomAvailable() << " of " << roomSpace << endl; // 45 out of 60
             cout << "The percentage of the room is : " << (getRoomAvailable() * 100) / roomSpace << "%" << endl; // 75%  
-
-        }
-        else if(choise == 2){
-            cout << "The available room is         : "  << getRoomAvailable() << " out of " << roomSpace << endl;
-            cout << "The percentage of the room is : " << getRoomAvailable() * 100 / roomSpace << "%" << endl;
-        }
+        // }
+        // else if(choise == 2){
+        //     cout << "The available room is         : "  << getRoomAvailable() << " out of " << roomSpace << endl;
+        //     cout << "The percentage of the room is : " << getRoomAvailable() * 100 / roomSpace << "%" << endl;
+        // }
     }
     void Hotel::reservedRoom(){ // done
         int roomSpace = rooms.size();
-        cout << "You want with all info or summury info ?\n";
-        cout << "1. All info\n";
-        cout << "2. Summury info\n";
-        cin >> choise;
-        if(choise == 1){
+        // cout << "You want with all info or summury info ?\n";
+        // cout << "1. All info\n";
+        // cout << "2. Summury info\n";
+        // cin >> choise;
+        // if(choise == 1){
             int countRoom = 0;
             int counter = 0;
-            for(int i = 0; i < rooms.size(); i++){
+            for(int i = 0; i < roomSpace; i++){
                 counter++;
                 if(rooms.at(i).getIsAvailable() == false){
                     countRoom++;
                 }
-                if(counter == rooms.size() / 6){
-                    cout << rooms.at(i).getType() << " " << rooms.at(i).getCapacity() <<  " : " << countRoom * 100 / (roomSpace / 6) << "%\n";
+                if(counter == roomSpace / 6){
+                    cout << rooms.at(i).getType() << " " << rooms.at(i).getCapacity() <<  " Room : " << countRoom * 100 / (roomSpace / 6) << "%\n";
                     countRoom = 0;
                     counter = 0;
                 }
             }
-            cout << "The reserved room is          : " << roomSpace - getRoomAvailable() << " out of " << roomSpace << endl; // 45 out of 60
+            cout << "    The reserved room is      : " << roomSpace - getRoomAvailable() << " of " << roomSpace << endl; // 45 out of 60
             cout << "The percentage of the room is : " << (roomSpace - getRoomAvailable()) * 100 / roomSpace << "%" << endl; // 75%  
-        }
-        else if(choise == 2){
-            cout << "The reserved room is          : " << roomSpace - getRoomAvailable() << " out of " << roomSpace << endl; // 45 out of 60
-            cout << "The percentage of the room is : " << (roomSpace - getRoomAvailable()) * 100 / roomSpace << "%" << endl; // 75%  
-        }
+        // }
+        // else if(choise == 2){
+        //     cout << "The reserved room is          : " << roomSpace - getRoomAvailable() << " out of " << roomSpace << endl; // 45 out of 60
+        //     cout << "The percentage of the room is : " << (roomSpace - getRoomAvailable()) * 100 / roomSpace << "%" << endl; // 75%  
+        // }
     }
     void Hotel::TotalPriceOfToday(){ // done
         float totalPrice = 0;

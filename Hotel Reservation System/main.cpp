@@ -9,12 +9,15 @@ using namespace std;
     2- In check out func 
         your room id is 31 so you can't check out ==>> you can check out 30 
         if your room is is 1 you can't check out 
+    availbeleRoom func in Hotel.cpp need to changed, make it more easy
+    rooms.at(i).printGloblalInfo() func in Hotel::displayRoom() in Hotel.cpp need to changed,
+    
     */
 int main(){
     cout << "RoomID\t" << "ClientID\t" << "Name\t" << "\tEmail\t" << "\t\tAdress\t" << "\tCity\t" << "Nationality\t" << "Passport Number\t" << "Phone number\t" << "Days\t" << "Fees\t\n";
     cout << " 11  \t" << " 22\t" << "    Anis Bazzine   " << "anisbazzine@gmail.com   " << "adress in Ouargala  " << "Ouargla  " << "Algerine" << "123456789" << "0555555555" << "5" << "5000" << endl;
-    // Hotel hotel;
-    // hotel.mainMenu();
+    Hotel hotel;
+    hotel.mainMenu();
     cout << "Hotel Reservation System worek !\n" << endl;
     return 0;
 }
