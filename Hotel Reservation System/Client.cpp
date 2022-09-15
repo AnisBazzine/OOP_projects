@@ -29,6 +29,9 @@ using namespace std;
     void Client::setClientId(){
         clientId = clientIdCounter++;
     }
+    void Client::deleteClientId(){
+        clientIdCounter--;
+    }
     int Client::getClientId(){
         return clientId;
     }
@@ -65,5 +68,5 @@ using namespace std;
     }
     void Client::printGloblalInfo(int roomId, int days, float fees){
         //  ClientId roomId name email address city nationap passpor phone days fees
-        cout << roomId << "\t" << clientId << "\t" <<  name << "\t" << email << "\t" <<  adress << "\t" << city << "\t" << nationality << "\t" << passportNumber << "\t" << phone << "\t" << days << "\t" << fees << "\n";
+        cout << " " << roomId << "\t \t" << clientId << "\t" <<  name << "\t" << email << "\t" <<  adress << "\t" << city << "\t" << nationality << "\t" << passportNumber << "\t" << phone << "\t" << days << "\t" << fees << "\n";
     }

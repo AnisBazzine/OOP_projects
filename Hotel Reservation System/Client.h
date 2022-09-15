@@ -18,6 +18,7 @@ public:
     Client();
     Client(string name, string phone, string email, string adress, string city, string nationality, int passportNumber, int cardNumber, int cvcCode);
     void setClientId();
+    void deleteClientId();
     int getClientId();
     string getName();
     string getPhone();

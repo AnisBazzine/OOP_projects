@@ -41,7 +41,7 @@ using namespace std;
         if(typeRoom == "N" || typeRoom == "n")
             this->typeRoom = "Normal";
         else if(typeRoom == "V" || typeRoom == "v")
-            this->typeRoom = "Vip";
+            this->typeRoom = " Vip  ";
     }
     void Room::setCapacity(string capacity){
         if(capacity == "S" || capacity == "s")
@@ -113,5 +113,6 @@ using namespace std;
         cout << "Total price      : " << getTotalPrice() << endl;
     }
     void Room::printGloblalInfo(){
-        cout << roomId << "\t"<< typeRoom << "\t" << capacity << "\t" << dayIn << "-" << monthIn << "-" << yearIn << "\t" << dayOut << "-" << monthOut << "-" << yearOut << "\t" << isAvailable << endl;
+		string available = (isAvailable == 1) ? "True" : "False";
+        cout << roomId << "\t"<< typeRoom << "\t " << capacity << " \t " << dayIn << "-" << monthIn << "-" << yearIn << " \t \t " << dayOut << "-" << monthOut << "-" << yearOut << " \t \t \t " << available << endl; 
     }

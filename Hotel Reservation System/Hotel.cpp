@@ -36,6 +36,7 @@ using namespace std;
         int di,mi,yi;
         int dt,mt,yt;
         int idCounter = 0, sizeSpacilRoom = rooms.size() / 6;
+        bool chack = true;
         cout << "*** Personal Data ***\n";
 		free();
         cout << "Name ";
@@ -67,15 +68,14 @@ using namespace std;
         cout << "S - Single \t D - Double \t T - Triple\n";
         cout << "Room Capacity (S/D/T) : ";
         cin >> roomCapacity;
-        cout << "Check in data (dd/mm/yyyy) : ";
+        cout << "Check  in data (dd/mm/yyyy) : ";
         cin >> di >> mi >> yi;
         cout << "Check out data (dd/mm/yyyy) : ";
         cin >> dt >> mt >> yt;
         Client clientInHotel(name,phone,email,adress,city,nationality,passportNumber,cardNumber,cvcCode);
-        // Room roomInHotel(di, mi, yi, dt, mt, yt, clientInHotel);
 
         // you have all 6 type of rooms to put client there 
-        if(typeRoom == "N" && roomCapacity == "S"){
+        if((typeRoom == "N" or typeRoom == "n") && (roomCapacity == "S" or roomCapacity == "s")){
             idCounter = 0;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -89,7 +89,7 @@ using namespace std;
                 idCounter++;
             }
         }
-        else if(typeRoom == "N" && roomCapacity == "D"){
+        else if((typeRoom == "N" or typeRoom == "n") && (roomCapacity == "D" or roomCapacity == "d")){
             idCounter = sizeSpacilRoom;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -103,7 +103,7 @@ using namespace std;
                 idCounter++;
             }
         }
-        else if(typeRoom == "N" && roomCapacity == "T"){
+        else if((typeRoom == "N" or typeRoom == "n") && (roomCapacity == "T" or roomCapacity == "t")){
             idCounter = sizeSpacilRoom * 2;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -117,7 +117,7 @@ using namespace std;
                 idCounter++;
             }
         }
-        else if(typeRoom == "V" && roomCapacity == "S"){
+        else if((typeRoom == "V" or typeRoom == "v") && (roomCapacity == "S" or roomCapacity == "s")){
             idCounter = sizeSpacilRoom * 3;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -131,7 +131,7 @@ using namespace std;
                 idCounter++;
             }
         }
-        else if(typeRoom == "V" && roomCapacity == "D"){
+        else if((typeRoom == "V" or typeRoom == "v") && (roomCapacity == "D" or roomCapacity == "d")){
             idCounter = sizeSpacilRoom * 4;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -145,7 +145,7 @@ using namespace std;
                 idCounter++;
             }
         }
-        else if(typeRoom == "V" && roomCapacity == "T"){
+        else if((typeRoom == "V" or typeRoom == "V") && (roomCapacity == "T" or roomCapacity == "t")){
             idCounter = sizeSpacilRoom * 5;
             for(int i = 0; i < sizeSpacilRoom; i++){
                 if(rooms.at(idCounter).getIsAvailable() == true){
@@ -160,11 +160,15 @@ using namespace std;
             }
         }
         else{
-            cout << "Sorry, we don't have this room type and capacity\n";
+            cout << "Sorry, we don't have this type and capacity room\n";
+            clientInHotel.deleteClientId();
+            chack = false;
         }
-        clientInHotel.printInfo();
-        rooms.at(idCounter).printInfo();
-		cout << "After printed\nrooms.at(idcounter).printInfr();\n";
+        if(chack == true){
+            cout << "Your room is booked\n";
+            clientInHotel.printInfo();
+            rooms.at(idCounter).printInfo();
+        }
     }
     void Hotel::checkOut(){ // done
         int id = 0;
@@ -173,12 +177,13 @@ using namespace std;
         if(id <= 0 or id > rooms.size()){
             cout << "Sorry, we don't have this room\n";
         }
-        else if(rooms.at(id).getIsAvailable() == false){
-            rooms.at(id).setIsAvailable(true);
+        else if(rooms.at(id - 1).getIsAvailable() == false){
             roomAvailable++;
-            rooms.at(id).setClient(Client());
-            rooms.at(id).setDateIn(0,0,0);
-            rooms.at(id).setDateOut(0,0,0);
+            rooms.at(id - 1).setIsAvailable(true);
+            rooms.at(id - 1).setClient(Client());
+            rooms.at(id - 1).setDateIn(1,1,2022);
+            rooms.at(id - 1).setDateOut(1,1,2022);
+            cout << "Your room is free now\n";
         }
         else{
             cout << "Sorry, this room is not available\n";
@@ -205,9 +210,9 @@ using namespace std;
             else if(choise == 3)
                 displayClient();
             else if(choise == 4)
-                availbeleRoom();
-            else if(choise == 5)
                 displayRoom();      
+            else if(choise == 5)
+                availbeleRoom();
             else if(choise == 6)
                 reservedRoom();
             else if(choise == 7)
@@ -218,7 +223,7 @@ using namespace std;
         
     }
     void Hotel::displayClient(){ // done
-        cout << "Room ID\t" << "Client ID\t" << "Name\t" << "Email\t" << "Adress\t" << "City\t" << "Nationality\t" << "Passport Number\t" << "Phone number\t" << "Days\t" << "Fees\t\n";
+        cout << "Room-ID\t" << "Client-ID\t" << "Name\t" << "Email\t" << "Adress\t" << "City\t" << "Nationality\t" << "Passport-Number\t" << "Phone-number\t" << "Days\t" << "Fees\t\n";
         // cout << "11\t" << "22\t" << "Anis Bazzine" << "anisbazzine@gmail.com" << "adress in Ouargal" << "Ouargla" << "Algerine" << "123456789" << "0555555555" << "5" << "5000" << endl;
         for(int i = 0; i < rooms.size(); i++){
             if(!rooms.at(i).getIsAvailable()){
@@ -227,9 +232,8 @@ using namespace std;
         }
     }
     void Hotel::displayRoom(){ // done
-        cout << "ID\t" << "Type\t" << "Capacity\t" << "Check-in Date\t" << "Check-out Date\t" << "Is Available ?\t\n";
+        cout << "ID\t" << "Type\t" << "Capacity\t" << "Check-in Date\t" << "Check-out Date\t" << "Is Available ?\n";
         for(int i = 0; i < rooms.size(); i++){
-            if(i < rooms.size())
                 rooms.at(i).printGloblalInfo();
         }
     }
@@ -260,13 +264,8 @@ using namespace std;
                     counter = 0;
                 }
             }
-            cout << "    The available room is     : " << getRoomAvailable() << " of " << roomSpace << endl; // 45 out of 60
+            cout << "    The available room is     : " << getRoomAvailable();
             cout << "The percentage of the room is : " << (getRoomAvailable() * 100) / roomSpace << "%" << endl; // 75%  
-        // }
-        // else if(choise == 2){
-        //     cout << "The available room is         : "  << getRoomAvailable() << " out of " << roomSpace << endl;
-        //     cout << "The percentage of the room is : " << getRoomAvailable() * 100 / roomSpace << "%" << endl;
-        // }
     }
     void Hotel::reservedRoom(){ // done
         int roomSpace = rooms.size();
@@ -308,3 +307,6 @@ using namespace std;
 	void Hotel::free(){ // done
 		cin.ignore(50,'\n');
 	}
+    void Hotel::printInfoClient(int clientId){
+
+    }
