@@ -9,8 +9,8 @@ using namespace std;
         roomId = 0;
         fees = 0;
         isAvailable = true;
-        dayIn = 01, monthIn = 01, yearIn = 2222;
-        dayOut = 01, monthOut = 01, yearOut = 2222;
+        dayIn = 01, monthIn = 01, yearIn = 2022;
+        dayOut = 01, monthOut = 01, yearOut = 2022;
         }
     Room::Room(int dayIn, int monthIn, int yearIn, int dayOut, int monthOut, int yearOut, Client client){
         this->dayIn = dayIn;
@@ -108,8 +108,11 @@ using namespace std;
     }
     void Room::printInfo(){
         cout << "Room ID          : " << roomId << endl;
+        cout << "Date             : " << dayIn << "-" << monthIn << "-" << yearIn;
+        cout << "  =>  " << dayOut << "-" << monthOut << "-" << yearOut << endl;
         cout << "Number of Nights : " << getDays() << endl;
-        cout << "Night Cost       : " << getFees() << endl;
+        cout << "Night Cost       : " << fees << endl;
+        cout << "Type & Capacity  : " << typeRoom << " " << capacity << endl;
         cout << "Total price      : " << getTotalPrice() << endl;
     }
     void Room::printGloblalInfo(){

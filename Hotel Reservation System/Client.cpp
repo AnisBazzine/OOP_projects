@@ -11,8 +11,8 @@ using namespace std;
         adress = "Defulat adress";
         city = "Ouargla";
         nationality = "Algerine";
-        passportNumber = 111111111;
-        cardNumber = 111111111, cvcCode = 111;
+        passportNumber = 10000000000000;
+        cardNumber = 100000000000000000, cvcCode = 111;
     }
     Client::Client(string name, string phone, string email, string adress, string city, string nationality, int passportNumber, int cardNumber, int cvcCode){
         Client::setClientId();
@@ -63,8 +63,15 @@ using namespace std;
         return cvcCode;
     }
     void Client::printInfo(){
-        cout << "Client ID : " << clientId << endl;
-        // cout << "Days      : " << daylight << endl;// daylight !!?
+        cout << "Client ID        : " << clientId << endl;
+        cout << "Name             : " << name << endl;
+        cout << "Phone            : " << phone << endl;
+        cout << "Email            : " << email << endl;
+        cout << "Adress           : " << adress << endl;
+        cout << "City             : " << city << endl;
+        cout << "Nationality      : " << nationality << endl;
+        cout << "Passport number  : " << passportNumber << endl;
+        cout << "Card number      : " << cardNumber << " - cvc code : " << cvcCode << endl;
     }
     void Client::printGloblalInfo(int roomId, int days, float fees){
         //  ClientId roomId name email address city nationap passpor phone days fees

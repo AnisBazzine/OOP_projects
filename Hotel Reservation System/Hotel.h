@@ -7,20 +7,20 @@ using namespace std;
 
 class Hotel{
     array <Room, 60> rooms;
+    int roomSpace = rooms.size();
 	int roomAvailable;
     int choise;
 public:
     Hotel();
     int getRoomAvailable();
     void checkIn();
-    void checkOut();        // get the room number from the user and check out the room
-    void mainMenu();		//to display the main menu
-    void displayClient();    //to display all the client  details
-    void displayRoom();      //to display all the room details and their status
-    void availbeleRoom();    //to display  available room  
-    void reservedRoom();    //to display reserved room
-    void TotalPriceOfToday();     //to calculate the total income of today
-    void printInfoClient(int clientId); // to print all client info
+    void checkOut();         // get the room number from the user and check out the room
+    void mainMenu();		 // to display the main menu
+    void displayClient();    // to display all the client  details
+    void displayRoom();      // to display all the room details and their status
+    void availbeleRoom();    // to display  available room  
+    void reservedRoom();     // to display reserved room
+    void printInfoClient();  // to print all client info
 	void free();
 };
 #endif // HOTEL_H_INCLUDED
