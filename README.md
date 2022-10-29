@@ -16,4 +16,4 @@ Make projects with C++ && OOP
 
 **The sixth is** :  [University Student GPA Project](https://github.com/AnisBazzine/OOP_projects/tree/main/Universty%20Student%20GPA) by ***19-06-2022*** and Finaly by ***22-06-2022*** 
 
-**The seventh is** :  [Hotel Reservation System]() by ***14-07-2022***
+**The seventh is** :  [Hotel Reservation System](https://github.com/AnisBazzine/OOP_projects/tree/main/Hotel%20Reservation%20System) by ***14-07-2022*** and finaly by ***17-09-2022***
